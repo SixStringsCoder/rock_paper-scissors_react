@@ -1,0 +1,66 @@
+/* Game Hands section */
+.gameHands {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1 1 0;
+  width: 100vw;
+  height: 60vh;
+  /*border: 2px solid purple;*/
+}
+
+.gameHands div {
+  margin: 0 4rem;
+  /*border: 2px solid orange;*/
+}
+
+@keyframes animateHands {
+    from {transition: transform .8s ease-in-out; transform: rotate(0deg);}
+    to {transform: rotate(1440deg);}
+}
+
+.gameHandsImage {
+  width: 12vw;
+}
+
+.spinHand {
+  transition: transform .7s ease-in-out;
+  transform: rotate(0deg);
+  transform: rotate(1440deg);
+  /* animation: animateHands 5s; */
+}
+
+/* ==================================
+   ReactCSSTransitionGroup Classes
+===================================== */
+/* start Enter state */
+.spin-enter {
+  transform: rotate(0deg);
+}
+
+/* end Enter state */
+.spin-enter.spin-enter-active {
+  transform: rotate(1440deg);
+  transition: transform .3s ease-in;
+}
+
+/* start Leave state */
+.spin-leave {
+  opacity: 1;
+}
+
+/* end Leave state */
+.spin-leave.spin-leave-active {
+  opacity: 0;
+  transition: .8s ease-out;
+}
+
+/* iniital mounting */
+.spin-appear {
+  opacity: 0;
+}
+
+.spin-appear.spin-appear-active {
+  opacity: 1;
+  transition: transform .4s ease-in-out;
+}

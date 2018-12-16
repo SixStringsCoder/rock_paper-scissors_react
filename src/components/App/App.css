@@ -1,0 +1,42 @@
+/* Universal Styles */
+
+html {
+  font-family: 'Slabo 27px', serif;
+  font-size: 18px;
+}
+
+
+#screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  /*border: 2px solid red;*/
+}
+
+/* Top Title */
+header {
+  margin: 0;
+  background-color: #000;
+  height: 17vh;
+}
+
+h1 {
+  font-size: 6rem;
+  text-align: center;
+  font-family: 'Black Ops One', cursive;
+  color: #fff;
+  margin: 0;
+  padding: .3rem 0;
+}
+
+
+
+/*=========================
+        Media Queries
+===========================*/
+@media only screen and (max-width: 560px) {
+  html {
+    font-size: 15px;
+  }
+}
