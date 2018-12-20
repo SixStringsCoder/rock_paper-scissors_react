@@ -96,9 +96,9 @@ class App extends Component {
       "GAME OVER! Compcrusher wins!"
     ];
 
-    this.setState({
-      referee: refCall[callOut],
-    });
+      this.setState({
+        referee: refCall[callOut],
+      });
   }
 
   removeSpin = () => {
@@ -133,9 +133,9 @@ class App extends Component {
           this.setCompScore();
         } else {
           // If there's a Tie
-          setTimeout(this.refereeCall, 1000, 0);
+          this.refereeCall(0);
         }
-        setTimeout(this.removeSpin, 1000);
+        setTimeout(this.removeSpin, 500);
       };
     }
 

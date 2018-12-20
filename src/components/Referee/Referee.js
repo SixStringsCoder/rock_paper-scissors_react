@@ -6,7 +6,7 @@ import './Referee.css';
 const Referee = ({ referee, isSpinning }) => {
     return (
       <div className="referee">
-        <h3 className={ isSpinning ? "" : "callOutAnimation"}>
+        <h3 className={ isSpinning ? "noReferee" : "callOutAnimation"}>
           {referee}
         </h3>
       </div>

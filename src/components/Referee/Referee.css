@@ -1,13 +1,12 @@
 /* Referee middle call-out section */
 
 @keyframes fadeIn {
-  from {font-size: 0;}
-  to {font-size: 2.5rem;}
+  from {font-size: 25.5rem; opacity: 0}
+  to {font-size: 3.5rem; opacity: 1}
 }
 
-@keyframes fadeOut {
-  from {font-size: 0;}
-  to {font-size: 2.5rem;}
+.noReferee {
+  opacity: 0;
 }
 
 .referee {
@@ -17,7 +16,6 @@
   text-align: center;
   width: 10rem;
   font-size: 2.5rem;
-  word-spacing: 10px;
   line-height: 150%;
   font-weight: bold;
   color: #04940f;
@@ -26,12 +24,9 @@
   /*font-family: 'Press Start 2P', cursive;*/
 }
 
-.fadeIn {
+.callOutAnimation {
+  align-self: center;
   animation-name: fadeIn;
-  animation-duration: 3s;
-}
-
-.fadeOut {
-  animation-name: fadeOut;
-  animation-duration: 3s;
+  animation-duration: .5s;
+  animation-timing-function: ease-out;
 }
