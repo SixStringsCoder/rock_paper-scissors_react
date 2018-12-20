@@ -13,7 +13,7 @@ const GameHand = ({isSpinning, yourHand, referee, computerHand}) => {
           {yourHand}
         </div>
 
-        <Referee referee={referee} />
+        <Referee referee={referee} isSpinning={isSpinning} />
 
         <div className={isSpinning ? "spinHand" : ""}>
           {computerHand}

@@ -3,10 +3,12 @@ import PropTypes from 'prop-types';
 import './Referee.css';
 
 // Callouts to say who wins or Tie
-const Referee = ({ referee }) => {
+const Referee = ({ referee, isSpinning }) => {
     return (
       <div className="referee">
-        <h3>{referee}</h3>
+        <h3 className={ isSpinning ? "" : "callOutAnimation"}>
+          {referee}
+        </h3>
       </div>
     );
   }

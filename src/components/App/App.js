@@ -101,13 +101,12 @@ class App extends Component {
     });
   }
 
-  stopSpin = () => {
+  removeSpin = () => {
     this.setState({
       isSpinning: false
-    }, console.log("stopSpinFired"));
+    }, console.log("removeSpinFired"));
 
   }
-
 
   whoWins = (yourChoice, compChoice) => {
     // All outcomes before game ends at 3
@@ -134,9 +133,9 @@ class App extends Component {
           this.setCompScore();
         } else {
           // If there's a Tie
-          this.refereeCall(0);
+          setTimeout(this.refereeCall, 1000, 0);
         }
-        setTimeout(this.stopSpin, 1000);
+        setTimeout(this.removeSpin, 1000);
       };
     }
 

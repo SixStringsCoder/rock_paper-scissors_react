@@ -1,12 +1,23 @@
 /* Referee middle call-out section */
 
+@keyframes fadeIn {
+  from {font-size: 0;}
+  to {font-size: 2.5rem;}
+}
+
+@keyframes fadeOut {
+  from {font-size: 0;}
+  to {font-size: 2.5rem;}
+}
+
 .referee {
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  width: 20rem;
+  width: 10rem;
   font-size: 2.5rem;
+  word-spacing: 10px;
   line-height: 150%;
   font-weight: bold;
   color: #04940f;
@@ -15,40 +26,12 @@
   /*font-family: 'Press Start 2P', cursive;*/
 }
 
-
-/* ==================================
-   ReactCSSTransitionGroup Classes
-===================================== */
-/* start Enter state */
-/*.fade-enter {
-  transform: rotate(0deg);
-}*/
-
-/* end Enter state */
-/*.fade-enter.fade-enter-active {
-  transform: rotate(1440deg);
-  transition: transform .3s ease-in;
-}*/
-
-/* start Leave state */
-/*.fade-leave {
-  opacity: 1;
-  display: block;
-}*/
-
-/* end Leave state */
-/*.fade-leave.fade-leave-active {
-  opacity: 0;
-  transition: .8s ease-out;
-  display: none;
-}*/
-
-/* iniital mounting */
-/*.fade-appear {
-  opacity: 0;
+.fadeIn {
+  animation-name: fadeIn;
+  animation-duration: 3s;
 }
 
-.fade-appear.fade-appear-active {
-  opacity: 1;
-  transition: transform .4s ease-in-out;
-}*/
+.fadeOut {
+  animation-name: fadeOut;
+  animation-duration: 3s;
+}
